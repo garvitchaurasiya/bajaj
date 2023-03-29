@@ -1,6 +1,7 @@
 const express = require('express');
 const cors = require('cors');
 const app = express();
+const port = 5000 || process.env.PORT;
 app.use(cors());
 app.use(express.urlencoded({ extended: false }));
 
@@ -37,6 +38,6 @@ app.post('/', (req, res)=>{
 
 })
 
-app.listen(5000, ()=>{
-    console.log("Listing on port 5000");
+app.listen(port, ()=>{
+    console.log("Listing on port");
 })
